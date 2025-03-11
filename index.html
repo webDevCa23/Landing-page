@@ -7,59 +7,137 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <title>Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>TrackMate - Smart Expense Tracking</title>
 </head>
 
 <body>
-  <!--Nav Hamburger-->
-<button id="nav-toggle" aria-label="Toggle navigation">☰</button>
-
   <!-- Header Section with Navigation -->
   <header>
-    <nav>
-      <ul id="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Services</a></li>
+    <nav aria-label="Main Navigation">
+      <div class="hamburger" aria-label="Menu Button">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>Welcome to Our Landing Page</h1>
-    <p>Your journey to better solutions starts here!</p>
-    <button id="sign-up-btn">Sign Up Today</button>
-  </section>
-
-  <!--Product Features-->
-  <section id="products">
-    <h2>Services</h2>
-    <div class="product-card">
-      <img src="path/to/image.jpg" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>Description of the product.</p>
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-container">
+    <div class="text-content">
+      <h1>Track Mate</h1>
+      <p>Your personal expense tracking companion</p>
+      <button id="cta-button">Check us out</button>
     </div>
-    <div class="product-card">
-      <img src="path/to/image.jpg" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>Description of the product.</p>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!--About Us-->
-  <section id="about">
+<section id="about">
+  <div class="about-info">
     <h2>About Us</h2>
-    <div class="about-info">
-      <p>We are here to help <span><em>YOU</em> !</span></p>
-      <button id="learn-more">Learn More...</button>
+    <div class="about-p" id="about-p-one">
+      <p>&#x2022 Welcome to <strong>TrackMate</strong>, the ultimate tool for managing and tracking your expenses! We
+        understand
+        how overwhelming it can be to stay on top of bills, debt payments, and monthly expenses, which is why we created
+        this platform to help you take control of your finances.</p>
     </div>
-  </section>
+    <div class="about-p" id="about-p-two">
+      <p>&#x2022 With TrackMate, you can easily input your recurring expenses, like your mortgage or rent, and track how much
+        you've paid toward debts each month. Our user-friendly dashboard allows you to update your payments, stay
+        organized, and monitor your financial progress. Whether you're budgeting for the future or just need to know where
+        your money is going, we’ve got you covered.</p>
+    </div>
+    <div class="about-p" id="about-p-three">
+      <p>&#x2022 Let us help you create a clear path to financial peace of mind.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services">
+  <div class="services-container">
+    <h2>Our Services</h2>
+    <p class="services-description">
+      Take control of your finances with TrackMate. Our tools help you manage your expenses, track payments, and stay
+      financially organized.
+    </p>
+
+    <div class="services-slider">
+      <div class="services-grid">
+        <div class="service">
+          <img src="./images/budget-icon.png" alt="Expense Tracking">
+          <h3>Expense Tracking</h3>
+          <p>Record all your monthly expenses in one place and easily update payments.</p>
+        </div>
+
+        <div class="service">
+          <img src="./images/payment-icon.png" alt="Payment Reminders">
+          <h3>Payment Reminders</h3>
+          <p>Never miss a payment again with automated reminders for due dates.</p>
+        </div>
+
+        <div class="service">
+          <img src="./images/progress-icon.png" alt="Financial Insights">
+          <h3>Financial Insights</h3>
+          <p>Get real-time reports on your spending habits and track financial goals.</p>
+        </div>
+
+        <div class="service">
+          <img src="./images/goals-icon.png" alt="Debt Reduction">
+          <h3>Debt Reduction Tools</h3>
+          <p>Visualize your debt payoff progress and stay motivated with goal tracking.</p>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="prev-btn">←</button>
+        <button class="next-btn">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Contact-->
+<section id="contact">
+  <div class="form-container">
+    <form action="#">
+      <h2>Contact Us Today</h2>
+
+      <!-- Name Input -->
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <!-- Email Input -->
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <!-- Message Input -->
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Type your message here" rows="5" required></textarea>
+
+      <!-- Submit Button -->
+      <button id="form-button" type="submit">Submit</button>
+    </form>
+  </div>
+</section>
 
   <!-- Footer Section -->
   <footer>
-    <p>&copy; 2025 Your Company Name. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of
+    <p>&copy; 2025 TrackMate. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of
         Service</a></p>
   </footer>
 
